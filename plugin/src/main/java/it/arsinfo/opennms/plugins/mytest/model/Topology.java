@@ -33,8 +33,8 @@ public class Topology {
         this.id = id;
     }
 
-    public void addLink(String source, String target) {
-        links.add(new Link(source, target));
+    public void addLink(String id, String source, String target) {
+        links.add(new Link(id, source, target));
     }
 
     public List<Link> getLinks() {

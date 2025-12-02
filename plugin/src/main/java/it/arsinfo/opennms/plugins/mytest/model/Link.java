@@ -8,17 +8,27 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Link {
 
+    @JsonProperty("id")
+    final private String id;
+
     @JsonProperty("source")
     private String source;
 
     @JsonProperty("target")
     private String target;
 
-    public Link() { }
+    public Link(String id) {
+        this.id = id;
+    }
 
-    public Link(String source, String target) {
+    public Link(String id, String source, String target) {
+        this.id = id;
         this.source = source;
         this.target = target;
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public String getSource() {
